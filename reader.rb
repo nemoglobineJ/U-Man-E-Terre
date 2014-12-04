@@ -4,7 +4,6 @@ require 'open-uri'
 feed_url = "http://rss.lemonde.fr/c/205/f/3050/index.rss"
 output = ""
 
-#commentaire
 open(feed_url) do |http|
   response = http.read
   result = RSS::Parser.parse(response, false)
